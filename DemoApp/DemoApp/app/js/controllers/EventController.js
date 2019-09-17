@@ -1,6 +1,12 @@
 "use strict";
 
 eventsApp.controller("EventController", function EventController($scope) {
+  $scope.sortorder = "name";
+  $scope.snippet = '<span style="color:red">hi there</span>';
+  $scope.boolValue = true;
+  $scope.myStyle = { color: "red" };
+  $scope.myClass = "blue";
+  $scope.buttonDisabled = "true";
   $scope.event = {
     name: "Angular Boot Camp",
     date: "1/1/2013",
@@ -18,7 +24,8 @@ eventsApp.controller("EventController", function EventController($scope) {
         duration: 1,
         level: "Advanced",
         abstract:
-          "In this session you will learn the ins and outs of directives!"
+          "In this session you will learn the ins and outs of directives!",
+        upVoteCount: 0
       },
       {
         name: "Scopes for fun and profit",
@@ -26,7 +33,8 @@ eventsApp.controller("EventController", function EventController($scope) {
         duration: 3,
         level: "Introductory",
         abstract:
-          "This session will take a closer look at scopes.  Learn what they do, how they do it, and how to get them to do it for you."
+          "This session will take a closer look at scopes.  Learn what they do, how they do it, and how to get them to do it for you.",
+        upVoteCount: 1
       },
       {
         name: "Well Behaved Controllers",
@@ -34,8 +42,15 @@ eventsApp.controller("EventController", function EventController($scope) {
         duration: 2,
         level: "Intermediate",
         abstract:
-          "Controllers are the beginning of everything Angular does.  Learn how to craft controllers that will win the respect of your friends and neighbors."
+          "Controllers are the beginning of everything Angular does.  Learn how to craft controllers that will win the respect of your friends and neighbors.",
+        upVoteCount: 0
       }
     ]
+  };
+  $scope.upVoteSession = function(session) {
+    session.upVoteCount++;
+  };
+  $scope.downVoteSession = function(session) {
+    session.upVoteCount--;
   };
 });

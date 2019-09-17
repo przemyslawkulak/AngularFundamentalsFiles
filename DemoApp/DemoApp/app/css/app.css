@@ -3,7 +3,8 @@
   background-color: #52575c;
   cursor: pointer;
 }
-select, textarea {
+select,
+textarea {
   color: #52575c;
 }
 
@@ -11,12 +12,12 @@ select, textarea {
   margin-top: 0px;
 }
 .session {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .votingWidget {
@@ -25,53 +26,64 @@ select, textarea {
 }
 
 .votingButton {
-  padding-left:6px;
-  cursor:pointer;
+  padding-left: 6px;
+  cursor: pointer;
+}
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none;
+}
+
+.blue {
+  color: blue;
 }
 
 .sessionThumbnail {
-    height:100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
-
-.calendar{
-    border: 1px solid #555;
-    width: 238px;
+.calendar {
+  border: 1px solid #555;
+  width: 238px;
 }
 .calendar .row {
-    margin-left: 0px;
+  margin-left: 0px;
 }
-.calendar .row div{
-    float:left;
-    padding:2px;
-    width:30px;
-    text-align:center;
+.calendar .row div {
+  float: left;
+  padding: 2px;
+  width: 30px;
+  text-align: center;
 }
 .calendar-nav-left {
-    float:left;
-    width: 20px;
-    padding:2px;
+  float: left;
+  width: 20px;
+  padding: 2px;
 }
 .calendar-nav-right {
-    float:left;
-    width: 20px;
-    padding:2px;
-    text-align:right;
+  float: left;
+  width: 20px;
+  padding: 2px;
+  text-align: right;
 }
 
 .calendar .row .calendar-hdr {
-    padding:2px;
-    float:left;
-    width: 166px;
-    text-align:center;
+  padding: 2px;
+  float: left;
+  width: 166px;
+  text-align: center;
 }
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 .date-picker {
-    position: absolute;
-    top: -7px;
-    left: 209px;
-    background-color: #272b30;
+  position: absolute;
+  top: -7px;
+  left: 209px;
+  background-color: #272b30;
 }
