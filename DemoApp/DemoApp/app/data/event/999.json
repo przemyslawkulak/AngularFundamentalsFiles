@@ -1,0 +1,11 @@
+{
+  "name": "My Event",
+  "date": "11/11/2018",
+  "time": "11pm",
+  "location": {
+    "address": "ul. chlodna 52",
+    "city": "Belchatow",
+    "province": "lodzkie"
+  },
+  "id": 999
+}

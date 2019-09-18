@@ -5,16 +5,24 @@ eventsApp.controller("EventController", function EventController(
   eventData
 ) {
   $scope.sortorder = "name";
-  $scope.event = eventData.event;
+  $scope.event = eventData
+    .getEvent()
+    .$promise.then(function(event) {
+      $scope.event = event;
+    })
+    .catch(function(response) {
+      console.log(response);
+    });
+
   $scope.snippet = '<span style="color:red">hi there</span>';
   $scope.boolValue = true;
   $scope.myStyle = { color: "red" };
   $scope.myClass = "blue";
   $scope.buttonDisabled = "true";
-  $scope.upVoteSession = function(session) {
+  $scope.upVoteSession = session => {
     session.upVoteCount++;
   };
-  $scope.downVoteSession = function(session) {
+  $scope.downVoteSession = session => {
     session.upVoteCount--;
   };
 });
