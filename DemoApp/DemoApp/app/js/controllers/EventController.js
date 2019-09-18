@@ -2,7 +2,8 @@
 
 eventsApp.controller("EventController", function EventController(
   $scope,
-  eventData
+  eventData,
+  $anchorScroll
 ) {
   $scope.sortorder = "name";
   $scope.event = eventData
@@ -24,5 +25,8 @@ eventsApp.controller("EventController", function EventController(
   };
   $scope.downVoteSession = session => {
     session.upVoteCount--;
+  };
+  $scope.scrollToSession = function() {
+    $anchorScroll();
   };
 });
