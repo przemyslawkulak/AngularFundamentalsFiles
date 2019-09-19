@@ -3,7 +3,8 @@
 eventsApp.controller("EventListController", function EventListController(
   $scope,
   $location,
-  eventData
+  eventData,
+  $route
 ) {
-  $scope.events = eventData.getAllEvents();
+  $scope.events = $route.current.locals.event;
 });

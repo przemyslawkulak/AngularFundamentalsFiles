@@ -2,14 +2,11 @@
 
 eventsApp.controller("EventController", function EventController(
   $scope,
-  eventData,
   $anchorScroll,
-  $routeParams,
   $route
 ) {
   $scope.sortorder = "name";
   $scope.event = $route.current.locals.event;
-  console.log($route.current.foo);
   $scope.reload = function() {
     $route.reload();
   };
