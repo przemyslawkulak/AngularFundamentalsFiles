@@ -3,11 +3,12 @@
 eventsApp.controller("EventController", function EventController(
   $scope,
   eventData,
-  $anchorScroll
+  $anchorScroll,
+  $routeParams
 ) {
   $scope.sortorder = "name";
   $scope.event = eventData
-    .getEvent()
+    .getEvent($routeParams.eventId)
     .$promise.then(function(event) {
       $scope.event = event;
     })
