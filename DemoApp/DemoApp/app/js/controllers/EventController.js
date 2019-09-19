@@ -8,14 +8,7 @@ eventsApp.controller("EventController", function EventController(
   $route
 ) {
   $scope.sortorder = "name";
-  $scope.event = eventData
-    .getEvent($routeParams.eventId)
-    .$promise.then(function(event) {
-      $scope.event = event;
-    })
-    .catch(function(response) {
-      console.log(response);
-    });
+  $scope.event = $route.current.locals.event;
   console.log($route.current.foo);
   $scope.reload = function() {
     $route.reload();

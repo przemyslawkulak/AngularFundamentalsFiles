@@ -14,7 +14,12 @@ var eventsApp = angular
     $routeProvider.when("/event/:eventId", {
       foo: "bar",
       templateUrl: "templates/EventDetails.html",
-      controller: "EventController"
+      controller: "EventController",
+      resolve: {
+        event: function($route, eventData) {
+          return eventData.getEvent($route.current.pathParams.eventId).$promise;
+        }
+      }
     });
     $routeProvider.otherwise({ redirectTo: "/events" });
     $locationProvider.html5Mode(true);
