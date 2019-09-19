@@ -4,7 +4,8 @@ eventsApp.controller("EventController", function EventController(
   $scope,
   eventData,
   $anchorScroll,
-  $routeParams
+  $routeParams,
+  $route
 ) {
   $scope.sortorder = "name";
   $scope.event = eventData
@@ -15,7 +16,10 @@ eventsApp.controller("EventController", function EventController(
     .catch(function(response) {
       console.log(response);
     });
-
+  console.log($route.current.foo);
+  $scope.reload = function() {
+    $route.reload();
+  };
   $scope.snippet = '<span style="color:red">hi there</span>';
   $scope.boolValue = true;
   $scope.myStyle = { color: "red" };
