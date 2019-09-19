@@ -1,7 +1,10 @@
 "use strict";
 
 var eventsApp = angular
-  .module("eventsApp", ["ngResource", "ngCookies"])
-  .factory("myCache", function($cacheFactory) {
-    return $cacheFactory("myCache", { capacity: 3 });
+  .module("eventsApp", ["ngResource", "ngRoute"])
+  .config(function($routeProvider) {
+    $routeProvider.when("/newEvent", {
+      templateUrl: "templates/NewEvent.html",
+      controller: "EditEventController"
+    });
   });
