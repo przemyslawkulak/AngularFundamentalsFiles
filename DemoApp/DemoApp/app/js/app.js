@@ -30,6 +30,10 @@ var eventsApp = angular
       templateUrl: "templates/EditProfile.html",
       controller: "EditProfileController"
     });
+    $routeProvider.when("/sampleDirective", {
+      templateUrl: "templates/SampleDirectives.html",
+      controller: "SampleDirectiveController"
+    });
     $routeProvider.when("/about", {
       template: "New AngularJS site"
     });
